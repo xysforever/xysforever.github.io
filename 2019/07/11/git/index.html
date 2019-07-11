@@ -16,7 +16,7 @@
   <title>git | 苦逼小码农的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本文介绍了什么是 git ，与 github 有什么区别及简单的安装。">
-<meta name="keywords" content="git github git安装">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git">
 <meta property="og:url" content="http://yoursite.com/2019/07/11/git/index.html">
@@ -24,7 +24,7 @@
 <meta property="og:description" content="本文介绍了什么是 git ，与 github 有什么区别及简单的安装。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/git/gitversion.png">
-<meta property="og:updated_time" content="2019-07-11T12:16:55.879Z">
+<meta property="og:updated_time" content="2019-07-11T12:24:37.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git">
 <meta name="twitter:description" content="本文介绍了什么是 git ，与 github 有什么区别及简单的安装。">
@@ -84,7 +84,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/git/" data-id="cjxyn0pnh00009wvcc20ounu4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/git/" data-id="cjxyna0a600000wvc2q5hv3ma" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -94,7 +94,7 @@
 <a id="more"></a>
 
 <h2 id="1-什么是-Git，-与-Github-的关系"><a href="#1-什么是-Git，-与-Github-的关系" class="headerlink" title="1. 什么是 Git， 与 Github 的关系"></a>1. 什么是 Git， 与 Github 的关系</h2><h3 id="（1）-Git-的定义"><a href="#（1）-Git-的定义" class="headerlink" title="（1） Git 的定义"></a>（1） Git 的定义</h3><blockquote>
-<p>git 是一个免费的分布式版本控制系统，旨在快速高效地处理从小型到大型项目的所有事物。</p>
+<p>git 是一个免费的分布式版本控制系统，旨在快速高效地处理从小型到大型项目的所有事物。 – 引自 <a href="https://git-scm.com/" title="点击前往" target="_blank" rel="noopener">git 官网</a></p>
 </blockquote>
 <p>不管是软件开发还是什么行业，代码、文档都不是一次性写完的，都需要有无数次的修改，无数个版本迭代，而 Git 是一个很好的版本管理工具。这次写的不满意，可以直接回滚到自己想要的版本。</p>
 <p>Git 的作者是 Linux ，没错，就是写了 Linux 系统的那个大佬 Linux，是他花了两周的时间用 C 写了这款分布式版本控制系统，狠人就是狠人啊,现在基本上就是最大的分布式版本管理系统了。</p>
@@ -108,9 +108,8 @@
 <p>简单来说， Git 是一种方法。而 GitHub 只是使用这种方法的一个代码仓库。方法只有一个，而采用这种方法的却又很多个，类似 Github 和码云的还有 Gitlab 等。</p>
 <h2 id="2-Git-的安装"><a href="#2-Git-的安装" class="headerlink" title="2. Git 的安装"></a>2. Git 的安装</h2><h3 id="（1）Windows-系统上的安装"><a href="#（1）Windows-系统上的安装" class="headerlink" title="（1）Windows 系统上的安装"></a>（1）Windows 系统上的安装</h3><p><a href="https://git-scm.com/" title="点击前往官网" target="_blank" rel="noopener">git</a> 的官网首页有介绍 Git 的优点和那些大公司在采用。Windows 上安装其实特别简单，只需下载<a href="https://git-scm.com/download/win" title="git-windows" target="_blank" rel="noopener">安装包</a>。下载完成是 <em>.exe</em> 的可执行文件，只要双击就可以了，然后就是一直下一步即可。最后会写如何验证 git 是否安装成功。</p>
 <h3 id="（2）-Linux-系统上的安装-部分，参考-git官网"><a href="#（2）-Linux-系统上的安装-部分，参考-git官网" class="headerlink" title="（2） Linux 系统上的安装(部分，参考 git官网)"></a>（2） Linux 系统上的安装(部分，参考 <a href="https://git-scm.com/download/linux" title="Download for Linux and Unix" target="_blank" rel="noopener">git官网</a>)</h3><h4 id="a-Debian-Ubuntu-上的安装"><a href="#a-Debian-Ubuntu-上的安装" class="headerlink" title="a. Debian/Ubuntu 上的安装"></a>a. Debian/Ubuntu 上的安装</h4><p>只需使用以下命令即可。</p>
-<blockquote>
-<p>apt-get -y update &amp;&amp; apt -y install git</p>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># apt-get -y update &amp;&amp; apt -y install git</span></span><br></pre></td></tr></table></figure>
+
 <p>然后使用命令 <code>git --version</code> 即可查看是否安装成功，安装成功的话会显示 git 的版本信息。</p>
 <h3 id="b-Fedora-上的安装"><a href="#b-Fedora-上的安装" class="headerlink" title="b. Fedora 上的安装"></a>b. Fedora 上的安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install git (Fedora 21)</span></span><br><span class="line"><span class="comment"># dnf install git (Fedora 22及以上)</span></span><br></pre></td></tr></table></figure>
 
@@ -136,7 +135,7 @@
     
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-github-git安装/">git github git安装</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
 
     </footer>
 </article>
@@ -182,7 +181,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-github-git安装/">git github git安装</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -191,7 +190,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/git-github-git安装/" style="font-size: 10px;">git github git安装</a>
+      <a href="/tags/git/" style="font-size: 10px;">git</a>
     </div>
   </aside>
 

@@ -24,7 +24,7 @@
 <meta property="og:description" content="本文介绍了什么是 git ，与 github 有什么区别及简单的安装。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/git/Snipaste_2019-07-09_23-19-22.png">
-<meta property="og:updated_time" content="2019-07-11T09:48:13.267Z">
+<meta property="og:updated_time" content="2019-07-11T11:57:07.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git">
 <meta name="twitter:description" content="本文介绍了什么是 git ，与 github 有什么区别及简单的安装。">
@@ -84,7 +84,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/git/" data-id="cjxyhp1260000s8vc6h0adbze" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/git/" data-id="cjxymbjhm0000jwvcx1ddfiv8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -109,12 +109,20 @@
 <h2 id="Git-的安装"><a href="#Git-的安装" class="headerlink" title="Git 的安装"></a>Git 的安装</h2><h3 id="Windows-系统上的安装"><a href="#Windows-系统上的安装" class="headerlink" title="Windows 系统上的安装"></a>Windows 系统上的安装</h3><p><a href="https://git-scm.com/" title="点击前往官网" target="_blank" rel="noopener">git</a> 的官网首页有介绍 Git 的优点和那些大公司在采用。Windows 上安装其实特别简单，只需下载<a href="https://git-scm.com/download/win" title="git-windows" target="_blank" rel="noopener">安装包</a>。下载完成是 <em>.exe</em> 的可执行文件，只要双击就可以了，然后就是一直下一步即可。<br>安装完成后打开，输入命令 <code>git --version</code>，如果安装成功就会弹出 Git 的版本信息，效果如下图所示。</p>
 <img src="/2019/07/11/git/Snipaste_2019-07-09_23-19-22.png">
 
-<h3 id="Linux-系统上的安装"><a href="#Linux-系统上的安装" class="headerlink" title="Linux 系统上的安装"></a>Linux 系统上的安装</h3><h4 id="Debian-Ubuntu-上的安装"><a href="#Debian-Ubuntu-上的安装" class="headerlink" title="Debian/Ubuntu 上的安装"></a>Debian/Ubuntu 上的安装</h4><p>只需使用以下命令即可。</p>
+<h3 id="Linux-系统上的安装-部分，参考-git官网"><a href="#Linux-系统上的安装-部分，参考-git官网" class="headerlink" title="Linux 系统上的安装(部分，参考 git官网)"></a>Linux 系统上的安装(部分，参考 <a href="https://git-scm.com/download/linux" title="Download for Linux and Unix" target="_blank" rel="noopener">git官网</a>)</h3><h4 id="Debian-Ubuntu-上的安装"><a href="#Debian-Ubuntu-上的安装" class="headerlink" title="Debian/Ubuntu 上的安装"></a>Debian/Ubuntu 上的安装</h4><p>只需使用以下命令即可。</p>
 <blockquote>
 <p>apt-get -y update &amp;&amp; apt -y install git</p>
 </blockquote>
 <p>然后使用命令 <code>git --version</code> 即可查看是否安装成功，安装成功的话会显示 git 的版本信息。</p>
-<h3 id="Fedora-上的安装"><a href="#Fedora-上的安装" class="headerlink" title="Fedora 上的安装"></a>Fedora 上的安装</h3><h3 id="Mac-上的安装"><a href="#Mac-上的安装" class="headerlink" title="Mac 上的安装"></a>Mac 上的安装</h3><p>这个系统安装最简单，为什么呢，因为我买不起苹果电脑啊,我没装过。所以，仅留下<a href="https://git-scm.com/download/mac" title="点击下载" target="_blank" rel="noopener">安装包</a>，没用过，总之一句话，想安装的话，自己悟。</p>
+<h3 id="Fedora-上的安装"><a href="#Fedora-上的安装" class="headerlink" title="Fedora 上的安装"></a>Fedora 上的安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install git (Fedora 21)</span></span><br><span class="line"><span class="comment"># dnf install git (Fedora 22及以上)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Arch-Linux-上的安装"><a href="#Arch-Linux-上的安装" class="headerlink" title="Arch Linux 上的安装"></a>Arch Linux 上的安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="FreeBSD-上的安装"><a href="#FreeBSD-上的安装" class="headerlink" title="FreeBSD 上的安装"></a>FreeBSD 上的安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pkg install git</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pkg_add git</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Mac-上的安装"><a href="#Mac-上的安装" class="headerlink" title="Mac 上的安装"></a>Mac 上的安装</h3><p>这个系统安装最简单，为什么呢，因为我买不起苹果电脑啊,我没装过。所以，仅留下<a href="https://git-scm.com/download/mac" title="点击下载" target="_blank" rel="noopener">安装包</a>，没用过，总之一句话，想安装的话，自己悟。</p>
 
       
     </div><!-- .entry-content -->

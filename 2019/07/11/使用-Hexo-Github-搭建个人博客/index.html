@@ -24,7 +24,12 @@
 <meta property="og:description" content="应某位大佬吩咐，在这里讲解下如何使用 Hexo + Github 来搭建个人的博客。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo全图.png">
-<meta property="og:updated_time" content="2019-07-12T05:25:36.784Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/github注册.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/注册完成并创建项目.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/创建域名访问项目.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/node版本.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo版本.png">
+<meta property="og:updated_time" content="2019-07-13T08:58:57.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo + Github 搭建个人博客">
 <meta name="twitter:description" content="应某位大佬吩咐，在这里讲解下如何使用 Hexo + Github 来搭建个人的博客。">
@@ -84,7 +89,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/" data-id="cjy09y6yc0003ygvcywaw6xho" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/" data-id="cjy1auytb0001nsvc6c9bvgsu" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -95,8 +100,35 @@
 
 <h2 id="开篇先给大家放一张我的博客的效果图吧"><a href="#开篇先给大家放一张我的博客的效果图吧" class="headerlink" title="开篇先给大家放一张我的博客的效果图吧"></a>开篇先给大家放一张我的博客的效果图吧</h2><img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo全图.png">
 
-<h2 id="1-什么是-Github-呢"><a href="#1-什么是-Github-呢" class="headerlink" title="1. 什么是 Github 呢"></a>1. 什么是 Github 呢</h2><p>在 <a href="https://xysforever.github.io/2019/07/11/git-%E5%92%8C-github-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E5%AE%89%E8%A3%85/" title="git 和 github 的区别及安装" target="_blank" rel="noopener">前一篇文章</a> 中也介绍了 Github 是全球最大的同性交友网站，具体请看前一篇介绍。</p>
-<p>在这里呢，我们采用了 Github 来作为我们的代码管理仓库，不仅因为他是免费的，而且因为其有 <strong><em>Github Page</em></strong> 这个特别牛叉的功能，就是给每个人都提供了一个域名。在这个特定的仓库里，我们可以使用特定的域名来访问此项目，为本篇文章打下了基础。</p>
+<h2 id="准备篇"><a href="#准备篇" class="headerlink" title="准备篇"></a>准备篇</h2><p>要安装的环境及使用的软件</p>
+<p>git、 node.js、 Hexo</p>
+<p>这里我使用的是 Visual Studio Code(下面简称 vscode)，不得不说这是一款十分强大的编辑器。当然了，采用什么编写不限制，我这里的话只介绍 vscode 的用法。</p>
+<h2 id="1-Github-的简介及配置"><a href="#1-Github-的简介及配置" class="headerlink" title="1. Github 的简介及配置"></a>1. Github 的简介及配置</h2><p>在 <a href="https://xysforever.github.io/2019/07/11/git-%E5%92%8C-github-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E5%AE%89%E8%A3%85/" title="git 和 github 的区别及安装" target="_blank" rel="noopener">前一篇文章</a> 中也介绍了 Github 是全球最大的同性交友网站，具体请看前一篇介绍。</p>
+<p>在这里呢，我们采用了 Github 来作为我们的代码管理仓库，不仅因为他是免费的，而且因为其有 <strong><em>Github Page</em></strong> 这个特别牛叉的功能，就是给每个人都提供了一个域名。在这个特定的仓库里，我们可以使用特定的域名来访问此项目，为本篇文章的实现打下了基础。</p>
+<p>首先，我们得先注册一个 Github 的账号。 <a href="https://github.com/" title="注册 Github 的账号" target="_blank" rel="noopener">点击前往</a></p>
+<p>Github 的注册页面如下图所示。</p>
+<img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/github注册.jpg">
+
+<p>然后就是填写用户名，密码了。这里的用户名千万不要随便填，以后的域名就是以它开头的，并且它是唯一的，不能与其他的重复。</p>
+<p>这里有注意点，注册填完用户名后，会让你选择账户类型，就是选择是否收费，选择 ￥0 就好了。然后邮箱一定要真实，要验证的。第三步的选择随便选选就行了。注册完成后就进入到了主页面，样式如下图所示。</p>
+<img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/注册完成并创建项目.png">
+
+<p>选择最中间的 <em>Start a Project</em>，然后就会进入如下界面。</p>
+<img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/创建域名访问项目.png">
+
+<p>项目的格式为 <strong><em>用户名.github.io</em></strong> ，就是之前让你们好好起的用户名。这个仓库是规定的，只能这样。然后就是配置 SSH 公钥了，具体的话参照简书的这篇 <a href="https://www.jianshu.com/p/a3b4f61d4747" title="点击前往" target="_blank" rel="noopener">Git安装及SSH Key管理之Windows篇</a> 进行配置。</p>
+<p>到此， Github 的配置就到这了。</p>
+<h2 id="2-安装-Node-js"><a href="#2-安装-Node-js" class="headerlink" title="2. 安装 Node.js"></a>2. 安装 Node.js</h2><p>那么什么是 Node.js 呢？</p>
+<blockquote>
+<p>Node.js 是一个基于Chrome V8 引擎的JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式I/O 的模型，使其轻量又高效。</p>
+</blockquote>
+<p>安装的话就是直接去 <a href="https://www.jianshu.com/p/189fd945f38f" title="点击前往" target="_blank" rel="noopener">官网</a> 下载，或者直接 <a href="https://nodejs.org/dist/v10.16.0/node-v10.16.0-x64.msi" title="点击下载" target="_blank" rel="noopener">点击下载</a> ，这里下载的是 <em>10.16.0长期支持版</em>，最新版是 <em>12.6.0</em>，之所以不选择最新版，就是因为最新版不一定会有什么样的问题，用长期支持版比较省心。安装也十分简单，只要双击即可安装。</p>
+<p>安装完需要检验是否安装完成，只需要打开 Git Bash，然后输入 <code>node --version</code> 即可校验，安装成功即会显示其版本号，如下图所示。</p>
+<img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/node版本.png">
+
+<p>到这里 node.js 就安装成功了。</p>
+<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3. 安装 Hexo"></a>3. 安装 Hexo</h2><p>打开 Git Bash ，输入命令 <code>npm install -g hexo</code> ,然后等待安装结果即可。最后就是校验 Hexo 是否安装成功，在 Git Bash 中输入命令 <code>hexo --version</code> ，安装成功就会显示如下界面。</p>
+<img src="/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo版本.png">
 
       
     </div><!-- .entry-content -->

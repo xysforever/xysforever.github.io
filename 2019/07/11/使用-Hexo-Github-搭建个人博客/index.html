@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo版本.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/hexo新建项目.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/初始化hexo.png">
-<meta property="og:updated_time" content="2019-07-14T03:32:33.127Z">
+<meta property="og:updated_time" content="2019-07-15T00:49:26.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo + Github 搭建个人博客">
 <meta name="twitter:description" content="应某位大佬吩咐，在这里讲解下如何使用 Hexo + Github 来搭建个人的博客。">
@@ -91,7 +91,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/" data-id="cjy2elyv40001e0vcbe99k8z2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/11/使用-Hexo-Github-搭建个人博客/" data-id="cjy3o7vn5000158vc62xn77za" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -143,8 +143,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 苦逼小码农的博客    // 网站名称</span><br><span class="line">author: 苦逼小码农        // 作者</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git              // 部署的类型为 git</span><br><span class="line">  repo: git@github.com:kbxmn/kbxmn.github.io.git //地址</span><br></pre></td></tr></table></figure>
 
 <p>这样简单的部署就完成了。然后安装 hexo-deployer-git 自动部署发布工具，使用命令 <code>npm install hexo-deployer-git  --save</code> 。</p>
-<p>使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> ，可以使用 <code>localhost:4000</code> 即可在浏览器中预览。然后想要推送到 Github 仓库，需要使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>。</p>
-<p>最后，可以在浏览器中使用 GitHub 仓库的名称访问了，即我的就是 ``kbxmn.github.io`。</p>
+<p>使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> ，可以使用 <code>localhost:4000</code> 即可在浏览器中预览。然后想要推送到 Github 仓库，需要使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>。</p>
+<p>最后，可以在浏览器中使用 GitHub 仓库的名称访问了，即我的就是 <code>kbxmn.github.io</code>。</p>
 
       
     </div><!-- .entry-content -->

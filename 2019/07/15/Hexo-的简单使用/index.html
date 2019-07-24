@@ -24,7 +24,9 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/下载主题.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/修改主题.png">
-<meta property="og:updated_time" content="2019-07-24T06:18:28.863Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/简介.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/实现简介.png">
+<meta property="og:updated_time" content="2019-07-24T11:26:37.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 的简单使用">
 <meta name="twitter:description" content="这篇文章主要介绍下 Hexo 的简单使用。">
@@ -84,7 +86,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/15/Hexo-的简单使用/" data-id="cjygv08f20001y4vc5l9iup3k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/15/Hexo-的简单使用/" data-id="cjyh657290000g0vcgcsz94x9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -112,6 +114,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img test.jpg %&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这样的话就会发现图片在 Markdown 编辑器中并没有显示出来，这是因为这是 Hexo 对于 Markdown 的一些修改，在其他编辑器是不承认的，想要看效果，那就在浏览器中查看，使用命令 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> ，然后在浏览器中使用 <code>localhost:4000</code> 来查看效果。</p>
+<h2 id="关于首页文章内容的简介"><a href="#关于首页文章内容的简介" class="headerlink" title="关于首页文章内容的简介"></a>关于首页文章内容的简介</h2><p>具体的就是下图的标记区域。</p>
+<img src="/2019/07/15/Hexo-的简单使用/简介.png">
+
+<p>要实现的话，其实很简单，只需要在开头的时候在在文章的标题 <strong><em>—</em></strong> 下面写上文章的简介，然后结尾加上 <code>&lt;!-- more --&gt;</code> 即可。具体如下图。</p>
+<img src="/2019/07/15/Hexo-的简单使用/实现简介.png">
+
+<h2 id="关于编辑器的使用"><a href="#关于编辑器的使用" class="headerlink" title="关于编辑器的使用"></a>关于编辑器的使用</h2><p>个人建议使用 <strong><em>Visual Studio Code</em></strong> 这款软件，之间的文章也介绍过，这里讲的是其关于 Markdown 的插件 <strong><em>markdownlint</em></strong> ，这款插件会时刻提醒你的格式有哪些不规范，该怎么改正都有相应的要求，可以尝试下。具体的安装方法就是在 <em>vscode</em> 的 <strong>拓展</strong> 中输入 <strong><em>markdownlint</em></strong> ，然后找到与其一致的，点击安装即可。</p>
 
       
     </div><!-- .entry-content -->

@@ -23,7 +23,8 @@
 <meta property="og:description" content="这篇文章主要介绍下 Hexo 的简单使用。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/下载主题.png">
-<meta property="og:updated_time" content="2019-07-22T11:24:50.505Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/15/Hexo-的简单使用/修改主题.png">
+<meta property="og:updated_time" content="2019-07-24T06:18:28.863Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 的简单使用">
 <meta name="twitter:description" content="这篇文章主要介绍下 Hexo 的简单使用。">
@@ -83,7 +84,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/15/Hexo-的简单使用/" data-id="cjyebl2yn000004vcoowics15" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/15/Hexo-的简单使用/" data-id="cjygv08f20001y4vc5l9iup3k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -100,9 +101,17 @@
 <img src="/2019/07/15/Hexo-的简单使用/下载主题.png">
 
 <p>然后修改主目录下的 <em>_config.yml</em> 文件，将 <em>theme</em> 的值从 <em>landscape</em> 改成 <em>cyanstyle</em>，具体如下图所示。</p>
-
+<img src="/2019/07/15/Hexo-的简单使用/修改主题.png">
 
 <p>然后使用命令 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 后，即可在本地查看主题了。当然了， Hexo 的主题特别多，想要体验的不同的主题的话， <a href="https://hexo.io/themes/index.html" target="_blank" rel="noopener">点击这里</a> 跳转到 Hexo 的主题网站，里边有很多的主题，总有一款适合你。</p>
+<h2 id="Hexo-插入图片"><a href="#Hexo-插入图片" class="headerlink" title="Hexo 插入图片"></a>Hexo 插入图片</h2><p>Hexo 是支持 Markdown 的，具体什么是 Markdown 呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</span><br><span class="line"></span><br><span class="line">由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。甚至Markdown能被使用来撰写电子书。--引自维基百科</span><br></pre></td></tr></table></figure>
+
+<p>笔者的文章就是用 Markdown 编写的， Markdown 很容易的就让人写出格式十分漂亮的文本。当然了，由于编辑器的不同，有些语法还是有些不一样的，但是大部分的语法 Hexo 与其他的编辑器是相同的，这里介绍的就是插入图片。</p>
+<p>首先，在 <strong><em>_config.yml</em></strong> 配置文件中，将 <strong><em>post_asset_folder</em></strong> 的值从 <em>false</em> 改成 <em>true</em> 。然后在终端中输入 <code>hexo new 文件名</code> 命令；就会发现在 <strong><em>_posts</em></strong> 文件夹下新建两个东西，一个是 <em>.md</em> 文件，一个是文件夹，命名都是你命令中的文件名。然后将要插入的图片放在文件夹下，比如叫做 <em>test.jpg</em> ，然后在要插入图片的地方加入以下命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img test.jpg %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的话就会发现图片在 Markdown 编辑器中并没有显示出来，这是因为这是 Hexo 对于 Markdown 的一些修改，在其他编辑器是不承认的，想要看效果，那就在浏览器中查看，使用命令 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> ，然后在浏览器中使用 <code>localhost:4000</code> 来查看效果。</p>
 
       
     </div><!-- .entry-content -->

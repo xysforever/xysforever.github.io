@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="简单的介绍 Java 的自动化测试框架 TestNG。">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>TestNG 的简单使用 | 苦逼小码农的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单的介绍 Java 的自动化测试框架 TestNG。">
+<meta name="keywords" content="testng">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TestNG 的简单使用">
+<meta property="og:url" content="http://yoursite.com/2019/07/28/TestNG-的简单使用/index.html">
+<meta property="og:site_name" content="苦逼小码农的博客">
+<meta property="og:description" content="简单的介绍 Java 的自动化测试框架 TestNG。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/07/28/TestNG-的简单使用/生成testng文件.png">
+<meta property="og:updated_time" content="2019-07-28T08:39:44.014Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TestNG 的简单使用">
+<meta name="twitter:description" content="简单的介绍 Java 的自动化测试框架 TestNG。">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/28/TestNG-的简单使用/生成testng文件.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苦逼小码农的博客" rel="home">苦逼小码农的博客</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-TestNG-的简单使用" class="post-TestNG-的简单使用 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      TestNG 的简单使用
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/07/28/TestNG-的简单使用/" data-id="cjympqwbv0001a8vcuoll9boi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>简单的介绍 Java 的自动化测试框架 TestNG。</p>
+<a id="more"></a>
+
+<h2 id="Testng-简介"><a href="#Testng-简介" class="headerlink" title="Testng 简介"></a>Testng 简介</h2><blockquote>
+<p>TestNG是一个Java语言的测试框架，由Cédric Beust受到JUnit和NUnit的启发而创建。TestNG的设计目标是，覆盖更广泛的测试类别范围：单元测试、功能测试、端到端测试、集成测试等，并且功能更强大、更易于使用。 – Wiki百科</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在 <em>IntelliJ IDEA</em> 中创建 Java 项目，选择 <strong><em>Maven</em></strong> ，<em>Maven</em> 是 <strong>Apache Maven是一个软件项目管理和理解工具。基于项目对象模型（POM）的概念，Maven可以从一个中心信息管理项目的构建，报告和文档</strong> 。创建完成后，在 <em>pom.xml</em> 文件中加入如下的内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;repositories&gt;</span><br><span class="line">        &lt;repository&gt;</span><br><span class="line">            &lt;id&gt;jcenter&lt;/id&gt;</span><br><span class="line">            &lt;name&gt;bintray&lt;/name&gt;</span><br><span class="line">            &lt;url&gt;http://jcenter.bintray.com&lt;/url&gt;</span><br><span class="line">        &lt;/repository&gt;</span><br><span class="line">    &lt;/repositories&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.testng&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;testng&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;6.10&lt;/version&gt;</span><br><span class="line">            &lt;scope&gt;<span class="built_in">test</span>&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后在右下角的提示框中点击 <em>enable</em> ，开始自动下载 Testng 所需要的依赖。</p>
+<p>##　注解</p>
+<table>
+<thead>
+<tr>
+<th align="left">注解</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">@BeforeSuite</td>
+<td align="left">在该套件中的所有测试都运行在注释的方法之前，仅运行一次</td>
+</tr>
+<tr>
+<td align="left">@AfterSuite</td>
+<td align="left">在该套件的所有测试都运行在注解之后，仅运行一次。</td>
+</tr>
+<tr>
+<td align="left">@BeforeClass</td>
+<td align="left">在调用当前类的第一个测试方法之前运行，注释方法仅运行一次</td>
+</tr>
+<tr>
+<td align="left">@AfterClass</td>
+<td align="left">在调用当前类的第一个测试方法之后运行，注释方法仅运行一次</td>
+</tr>
+<tr>
+<td align="left">@BeforeTest</td>
+<td align="left">注释的方法将在属于 <code>&lt;test&gt;</code> 标签内的类的所有测试方法运行之前运行</td>
+</tr>
+<tr>
+<td align="left">@AfterTest</td>
+<td align="left">注释的方法将在属于 <code>&lt;test&gt;</code> 标签内的类的所有测试方法之后运行</td>
+</tr>
+<tr>
+<td align="left">@BeforeGroups</td>
+<td align="left">配置方法将在之前运行组列表。此方法保证在调用属于这些组中的任何一个的第一个测试方法之前不久运行</td>
+</tr>
+<tr>
+<td align="left">@AfterGroups</td>
+<td align="left">此配置方法将在之后运行组列表，该方法保证在调用属于任何这些组的最后一个测试方法之后不久运行</td>
+</tr>
+<tr>
+<td align="left">@BeforeMethod</td>
+<td align="left">注释方法将在每个测试方法之前运行</td>
+</tr>
+<tr>
+<td align="left">@AfterMethod</td>
+<td align="left">注释方法将在每个测试方法之后运行</td>
+</tr>
+<tr>
+<td align="left">@DataProvider</td>
+<td align="left">标记一种方法来提供测试方法的数据。注释方法必须返回一个 <code>Object[][]</code> ，其中每个 <code>Object[]</code> 可以被分配给测试方法的参数列表。要从该 <code>DataProvider</code> 接收数据的 <code>@Test</code> 方法需要使用与此注释名称相等的 <code>dataProvider</code>名称</td>
+</tr>
+<tr>
+<td align="left">@Factory</td>
+<td align="left">将一个方法标记成工厂，返回 <code>TestNG</code> 将被用作测试类的对象。该方法必须返回 <code>Object[]</code> 。</td>
+</tr>
+<tr>
+<td align="left">@Listeners</td>
+<td align="left">定义测试类上的侦听器。</td>
+</tr>
+<tr>
+<td align="left">@Parameters</td>
+<td align="left">描述如何将参数传递给 <code>@Test</code> 方法。</td>
+</tr>
+<tr>
+<td align="left">@Test</td>
+<td align="left">将类或方法标记为测试的一部分。</td>
+</tr>
+</tbody></table>
+<h2 id="关于-testng-xml-文件的解析"><a href="#关于-testng-xml-文件的解析" class="headerlink" title="关于 testng.xml 文件的解析"></a>关于 <strong><em>testng.xml</em></strong> 文件的解析</h2><p>首先在刚创建的时候，找不到这个文件，首先要开始创建这个文件。 在 <em>IntelliJ IDEA</em> 中安装 <strong><em>Create TestNG XML</em></strong> 这个插件，然后右键点击项目名称，找到菜单中的 <em>Creat TestNG XML</em> 的选项。点击之后，就会生成一个 <em>testng.xml</em> 的文件，具体如下图。</p>
+<img src="/2019/07/28/TestNG-的简单使用/生成testng文件.png">
+
+<p>首先， <strong><em>testng.xml</em></strong> 的文件样式如下面所示。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">suite</span> <span class="attr">name</span>=<span class="string">"Suite1"</span> <span class="attr">verbose</span>=<span class="string">"1"</span> &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">test</span> <span class="attr">name</span>=<span class="string">"Nopackage"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">classes</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"NoPackageTest"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">classes</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">test</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">test</span> <span class="attr">name</span>=<span class="string">"Regression1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">classes</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"test.sample.ParameterSample"</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"test.sample.ParameterTest"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">classes</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">test</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">suite</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>&lt;suite&gt;...&lt;/suite&gt;</code> 表示定义了的一个测试套件。</p>
+<ul>
+<li><p><code>name</code> 定义测试套件的名称。</p>
+</li>
+<li><p><code>verbose</code> 定义命令行信息打印等级，不会影响测试报告输出内容；可选值(1|2|3|4|5)</p>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;test&gt;...&lt;/test&gt;</code> 表示定义了一个测试。</p>
+<ul>
+<li>name 定义测试的名称</li>
+</ul>
+</li>
+<li><p><code>&lt;classes&gt;...&lt;/classes&gt;</code> 表示定义一组测试类</p>
+<ul>
+<li><p><code>&lt;class&gt;...&lt;/class&gt;</code> 表示定义一个测试类。</p>
+<ul>
+<li><code>name</code> 指定要运行的测试类。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/07/28/TestNG-的简单使用/">
+    <time datetime="2019-07-28T08:33:35.000Z" class="entry-date">
+        2019-07-28
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testng/">testng</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2019/07/15/Hexo-的简单使用/" rel="next">Hexo 的简单使用 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/28/TestNG-的简单使用/">TestNG 的简单使用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/15/Hexo-的简单使用/">Hexo 的简单使用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/11/使用-Hexo-Github-搭建个人博客/">使用 Hexo + Github 搭建个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/11/git-和-github-的区别及安装/">git 和 github 的区别及安装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/">hexo + github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo + github</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 苦逼小码农
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
